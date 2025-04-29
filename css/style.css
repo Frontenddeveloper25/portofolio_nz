@@ -65,6 +65,7 @@ section {
 .navbar-mid {
   display: inline-block;
   padding: 4px;
+  
 }
 
 
@@ -76,8 +77,8 @@ section {
   color: var(--secondary);
   padding-top: 3px;
   text-decoration: none;
-  margin-right: 3.5rem; 
   transition: ease 0.3s;
+  margin-right: 20px;
 }
 
 .navbar-mid a:hover {
@@ -99,8 +100,6 @@ section {
 
 .navbar-mid a:hover::after {
   width: 100%;
-  
-  
 }
 
 
@@ -419,14 +418,16 @@ section {
 
 /* Project */
 
+
+
 .project {
   width: 100%;
   color: var(--prime);
   margin-top: 3rem;
   padding: 0 7%;
   text-align: center;
-  
 }
+
 
 
 .project h1 {
@@ -436,75 +437,79 @@ section {
   font-size: 3rem;
 }
 
-.project p {
-  margin-bottom: 1rem;
+.card-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
 }
 
-.container-project {
-  margin-top: 1.5rem;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  flex-wrap: wrap;
+
+.card-project:nth-child(2) {
+  order: 3; /* Geser ke posisi 3 */
 }
+
+.card-project:nth-child(3) {
+  order: 2; /* Geser ke posisi 2 */
+}
+
 
 .card-project {
-  background-color: #d2aa82;
-  justify-content: space-between;
-  display: flex;
+  height: 100%;
+  border: 1px solid #c29364;
+  width: 30%;
   padding: 1rem;
   box-sizing: border-box;
-  width: 350px; /*gunakan PX agar item ke bawah ***/
-  border-radius: 25px;
+  border-radius: 30px;
   text-align: left;
-  box-shadow: -5px -5px 10px #123458;
-  transition: ease 0.3s;
-  height: 100%;
-  margin: 1rem;
-  
+  overflow: hidden;
+  background-color: #d2aa82;
+  box-shadow: 3px 3px 15px #123458;
+  margin-top: 2rem;
+  animation: floatIn 1s ease-out, floatMove 3s ease-in-out infinite;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  transition: ease-in-out 0.3s;
 }
 
 .card-project:hover {
-  transition: 0.3s ease;
-  background-color: #d8b38f;
-  box-shadow: 5px 5px 10px #123458;
-  transform: scale(1.03);
-}
-
-.content-project p {
-  margin-bottom: 1rem;
+  scale: 1.1;
+  transition: ease-in-out 0.3s;
 }
 
 .card-project img {
   width: 100%;
-  border-radius: 15px;
-  height: 300px;
+  border-radius: 20px;
 }
 
+.card-project h2 {
+  margin: 1rem 0 0.5rem;
+}
 
+.card-project p {
+  line-height: 30px;
+}
 
 .card-project a {
   text-decoration: none;
-  color: var(--secondary);
-  padding: 2px 1rem;
-  background-color: #d4c9be00;
-  box-sizing: border-box;
-  border-radius: 30px;
-  margin: 1rem 0rem;
-  border: 1px solid #D4C9BE;
-  font-weight: 700;
-  transition: 0.3s ease;
-  position: relative;
-  top: 3px;
-  left: -3px;
+  font-weight: 600;
+  color: #323232;
+  background-color: #e3e3e3;
+  padding: 5px;
+  margin: 0.5rem;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: 0.3s ease ;
 }
 
 .card-project a:hover {
-  background-color: #123458;
-  border: 1px solid #0000;
-  transition: 0.3s ease;
+  background-color: #2e2e2e;
+  color: #ebc6a1;
+  transition: ease 0.3s;
 }
-/* project */
+
+
 
 /* kontak */
 .kontak-me {
@@ -632,4 +637,25 @@ section {
     opacity: 0; /* supaya muncul setelah animasi jalan */
   }
   
+  /* Animasi masuk (fade + naik sedikit) */
+@keyframes floatIn {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animasi bergerak-gerak pelan */
+@keyframes floatMove {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
   
