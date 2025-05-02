@@ -32,21 +32,15 @@ main {
 
 section {
     width: 100vw;
-    background-color: #ededed;
 }
 
-.gradient-transition {
-  height: 130px;
-  background: linear-gradient(to bottom, #123458, #ededed);
-  bottom: 120px;
-}
 
 .navbar {
     display: flex;
     position: fixed;
     z-index: 9999;
     width: 100vw;
-    background-color: rgb(18, 52, 88);
+    background: linear-gradient(to bottom, #123458, #265b94);
     justify-content: space-between;
     padding: 1rem 7%;
     top: 0;
@@ -111,6 +105,8 @@ section {
   color: var(--secondary);
   padding-top: 3px;
   text-decoration: none;
+  justify-content: center;
+  align-content: center;
 }
 
 .navbar-icon a::after {
@@ -168,7 +164,7 @@ section {
 
 .hero {
  padding: 8rem 7% 3rem;
- background-color: #123458;
+ background-color: #ededed;
  height: 100vh;
  display: flex;
  flex-wrap: wrap;
@@ -178,10 +174,11 @@ section {
 .hero .container {
   justify-content: center;
   display: flex;
-  border: 1px solid #d8b38f;
+  border: 2px solid #d8b38f;
   align-content: center;
   box-sizing: border-box;
   border-radius: 3rem;
+  background-color: #123458;
 }
 
 .hero .content {
@@ -208,6 +205,10 @@ section {
     margin-bottom: 1rem;
   }
 
+  .content p {
+    word-spacing: 8px;
+  }
+
 
 .cta {
     display: flex;
@@ -232,6 +233,7 @@ section {
 .btn-primary:hover {
     background-color: #D4C9BE;
     color: var(--prime);
+    box-shadow: 3px 3px 10px #c29364;
 }
 
 .btn-secondary {
@@ -242,7 +244,8 @@ section {
 
 .btn-secondary:hover {
     background-color: white;
-    color: #333;
+    color: #c29364;
+    box-shadow: 3px 3px 10px #c29364;
 }
 
 
@@ -273,6 +276,7 @@ section {
     font-size: 3rem;
     padding-top: 5rem;
     color: var(--prime);
+    text-shadow: 1px 1px 3px #4271a3;
 }
 
 .about-content h2 {
@@ -280,7 +284,6 @@ section {
   font-size: 2rem;
   margin-bottom: 1rem;
   margin-top: 1rem;
-
 }
 
 .about p {
@@ -435,6 +438,7 @@ section {
   padding-top: 5rem;
   margin-bottom: 1rem;
   font-size: 3rem;
+  text-shadow: 1px 1px 3px #4271a3;
 }
 
 .card-container {
