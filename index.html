@@ -10,6 +10,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 <script src="https://unpkg.com/feather-icons"></script>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 
 </head>
 <body>
@@ -22,7 +24,7 @@
   <div class="navbar-mid">
     <a href="#home">Beranda</a>
     <a href="#about">Tentang</a>
-    <a href="#skill" value="skill" name="skill" for="skill">Skill</a>
+    <a href="#skill">Skill</a>
     <a href="#project">Project</a>
     <a href="#kontak">Hubungi</a>
   </div>
@@ -45,7 +47,7 @@
     <section class="hero" id="home">
       <div class="container">
         <div class="img-hero">
-          <img src="img/compro.png" alt="">
+          <img src="img/compro.png" alt="profile portofolio">
         </div>
         <div class="content">
           <h1>Hai! saya <span>Neza Raekhan Maulana</span></h1>
@@ -53,8 +55,8 @@
           <p>Setelah 7 tahun berkarier di dunia finance, kini saya memulai perjalanan baru di dunia teknologi. 
             Saya telah mengikuti kursus UI/UX dan Frontend Development, dan membangun beberapa proyek pribadi untuk mengasah skill saya.</p>
             <div class="cta">
-              <a href="#project" class="btn-primary" id="#">Lihat Proyek saya</a>
-              <a href="#" class="btn-secondary" id="#">hubungi saya</a>
+              <a href="#project" class="btn-primary">Lihat Proyek saya</a>
+              <a href="#kontak" class="btn-secondary">hubungi saya</a>
             </div>
           </div>       
         </div>
@@ -63,42 +65,42 @@
     
 
     <section class="about" id="about">
-      <h1> Tentang saya</h1>
-      <div class="about-content">
+      <h1 data-aos="fade-up" data-aos-delay="300"> Tentang Saya</h1>
+      <div class="about-content" data-aos="fade-up" data-aos-delay="400">
         <p>"Saya adalah pribadi yang ceria dan antusias dalam dunia desain digital serta pemrograman. Setiap hari saya terus mengasah kemampuan untuk mencapai cita-cita saya sebagai seorang
           <span>front-end developer</span> dan saya selalu terbuka untuk belajar hal baru."</p>
           <h2>Sertifikasi</h2>
       </div>
       <div class="card">
-      <div class="card-pendidikan">
+        <div class="card-pendidikan" data-aos="flip-left" data-aos-duration="1000">
         <img src="img/bg_cv.jpg" alt="Sertifikasi 1">
         <div class="card-content">
           <h2>Sertifikat Design UI/UX Fundamental</h2>
           <p>Udemy Course</p>
         </div>
       </div>
-      <div class="card-pendidikan">
+      <div class="card-pendidikan" data-aos="flip-left" data-aos-duration="1000">
         <img src="img/bg_cv.jpg" alt="sertifikasi 2">
         <div class="card-content">
           <h2>Sertifikat FrontEnd Web Development</h2>
           <p>Coding Studio</p>
         </div>
       </div>
-      <div class="card-paragraf">
+      <div class="card-paragraf" data-aos="fade-right" data-aos-delay="400">
         <h3>Perjalanan :</h3>
 
-        <p>Selama saya bekerja 7 tahun sebagai karyawan finance saya merasa ingin memnyuai skill untuk mencari pekerjaan baru karna yang saya sadari tidak ada pekerjaan yang membutuhkan skill, lalu kemudian saya awali dengan ikut online course di udemy yaitu design UI/UX Fundamental.
+        <p>Selama saya bekerja 7 tahun sebagai karyawan finance saya merasa ingin memulai skill untuk mencari pekerjaan baru karna yang saya sadari tidak ada pekerjaan yang membutuhkan skill, lalu kemudian saya awali dengan ikut online course di udemy yaitu design UI/UX Fundamental.
           <br> <br>
-          satu bulan setelahnya saya mencoba ikut korsus dan melanjutkan perjalanan saya untuk menjadi programmer tepatnya di role front end developer. dari situ saya mengikuti kursus basic front end web development di coding studio serta membuat beberapa project basic untuk syarat lulus
+          satu bulan setelahnya saya mencoba ikut Kursus dan melanjutkan perjalanan saya untuk menjadi programmer tepatnya di role front end developer. dari situ saya mengikuti kursus basic front end web development di coding studio serta membuat beberapa project basic untuk syarat lulus
         </p>
       </div>
       </div>
     </section>
 
     <section class="skill" id="skill">
-      <h1>skill</h1>
-      <p>Berikut adalah Beberapa skill yang saya miliki</p>
-      <div class="container-skill">
+      <h1 data-aos="fade-up" data-aos-delay="300">Skill</h1>
+      <p data-aos="fade-up" data-aos-delay="350">Berikut adalah Beberapa skill yang saya miliki</p>
+      <div class="container-skill" data-aos="fade-up" data-aos-delay="500">
 
 
         <div class="skill-content">
@@ -159,7 +161,7 @@
               </svg>
           </div>
           <div class="skill-desc">
-            <h3>css</h3>
+            <h3>CSS</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, ipsum.</p>
           </div>
         </div>
@@ -170,7 +172,7 @@
               </svg>
           </div>
           <div class="skill-desc">
-            <h3>Js</h3>
+            <h3>JavaScript</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, ipsum.</p>
           </div>
         </div>
@@ -180,42 +182,40 @@
 
     <!-- project, latihan flexbox, membuat card -->
 <section class="project" id="project">
-  <h1>project saya</h1>
-  <p>Sekumpulan proyek pribadi yang di dalamnya berisi pengembangan diri saya dalam belajar hal hal baru.</p>
-  <div class="card-container">
-  <div class="card-project">
+  <h1 data-aos="fade-up" data-aos-duration="900">Proyek Saya</h1>
+  <p data-aos="fade-up" data-aos-delay="360">Sekumpulan proyek pribadi yang di dalamnya berisi pengembangan diri saya dalam belajar hal hal baru.</p>
+  <div class="card-container" data-aos="flip-left" data-aos-delay="500">
+  <div class="card-project" >
     <img src="img/compro.png" alt="">
-    <h2>Web Company Profile</h2>
-    <p>Pada Projek ini saya membuat web company profile untuk perusahaan jasa kalibrasi  <a href="#">Lihat Project</a></p>
+    <h2>Web Portofolio</h2>
+    <p>Membangun website Portofolio Pribadi dengan html, css, javascript </p>
   </div>
   <div class="card-project">
     <img src="img/ebporto.png" alt="">
-    <h2>Web Portofolio</h2>
-    <p>Pada Projek ini saya membuat web company profile untuk perusahaan jasa kalibrasi  <a href="https://frontenddeveloper25.github.io/portofolio_nz/" target="_blank">Lihat Project</a></p>
+    <h2>videografi</h2>
+    <p>Membuat Video documentasi dan iklan untuk client </p>
   </div>
   <div class="card-project">
     <img src="img/project2.jpg" alt="">
     <h2>UI/UX Design</h2>
-    <p>Pada Projek ini saya membuat web company profile untuk perusahaan jasa kalibrasi  <a href="#">Lihat Project</a></p>
+    <p>Pada Projek ini saya membuat web company profile untuk perusahaan jasa kalibrasi  </p>
   </div>
 </div>
   </section>
 
-<section class="kontak-me">
+<section class="kontak-me" id="kontak" data-aos="fade-up" data-aos-duration="1000">
   <div class="kontak-field">
     <h3>Tertarik dengan saya?</h3><a href="https://wa.me/081211951140">Hubungi Saya</a>
   </div>
 </section>
 
-<section class="footer">
-  <div class="footer-field">
-    <p>copyright :&&</p>
-  </div>
-</section>
 
 
 
-
+<!-- footer -->
+ <footer>
+  <p>&copy; 2025 Neza Raekhan Maulana. All Rights Reserved.</p>
+ </footer>
 
   </main>
 
@@ -224,5 +224,11 @@
   <script>
     feather.replace();
   </script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </body>
 </html>

@@ -9,6 +9,7 @@ body {
     font-family: 'poppins',sans-serif;
     box-sizing: border-box;
     background-color: #ededed;
+    height: 100%;
 }
 
 
@@ -23,16 +24,7 @@ html {
 }
 
 
-main {
-    width: 100vw;
-    color: #ededed;
-    text-decoration: none;
-    
-}
 
-section {
-    width: 100vw;
-}
 
 
 .navbar {
@@ -179,6 +171,7 @@ section {
   box-sizing: border-box;
   border-radius: 3rem;
   background-color: #123458;
+  color: #ededed;
 }
 
 .hero .content {
@@ -495,25 +488,6 @@ section {
   line-height: 30px;
 }
 
-.card-project a {
-  text-decoration: none;
-  font-weight: 600;
-  color: #323232;
-  background-color: #e3e3e3;
-  padding: 5px;
-  margin: 0.5rem;
-  border-radius: 10px;
-  font-size: 16px;
-  transition: 0.3s ease ;
-}
-
-.card-project a:hover {
-  background-color: #2e2e2e;
-  color: #ebc6a1;
-  transition: ease 0.3s;
-}
-
-
 
 /* kontak */
 .kontak-me {
@@ -521,6 +495,7 @@ section {
   display: flex;
   justify-content: center;
   margin-top: 4rem;
+  color: #ededed;
 }
 
 .kontak-field {
@@ -568,7 +543,13 @@ section {
 
 /* footer */
 
-
+footer {
+  background-color: #12345800;
+  color: #123458;
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px double #123458;
+}
 
 
 
