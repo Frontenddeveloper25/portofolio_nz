@@ -26,6 +26,7 @@ html, *, *::before, *::after {
 
 .navbar {
     display: flex;
+    align-items: center;
     position: fixed;
     z-index: 9999;
     width: 100vw;
@@ -37,8 +38,12 @@ html, *, *::before, *::after {
     box-shadow: 3px 0px 5px var(--secondary);
 }
 
+   
+
+
 .navbar-logo {
  align-content: center;
+ padding: 0 4px;
 }
 
 .navbar-logo span {
@@ -46,24 +51,21 @@ html, *, *::before, *::after {
 }
 
 .navbar-mid {
-  display: inline-block;
-  padding: 4px;
-  
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 
 .navbar-mid a {
   display: inline-block;
   position: relative;
-  padding: 0px 10px;
-  cursor: pointer;
+  padding: 0 10px;
+  margin-right: 20px;
   color: var(--secondary);
-  padding-top: 3px;
   text-decoration: none;
   transition: ease 0.3s;
-  margin-right: 20px;
 }
-
 .navbar-mid a:hover {
   transition: 0.3 ease;
   text-shadow: 1px 1px 3px #d2aa82;
@@ -73,12 +75,12 @@ html, *, *::before, *::after {
   content: '';
   position: absolute;
   left: 0px;
-  bottom: -5px;
   width: 0%;
-  height: 2px;
   background-color: var(--btn);
   transition: width 0.3s ease;
   border-radius: 2px;
+  height: 2px;
+  bottom: -5px;
 }
 
 .navbar-mid a:hover::after {
@@ -87,66 +89,47 @@ html, *, *::before, *::after {
 
 
 .navbar-icon a {
-  display: inline-block;
   position: relative;
-  padding: 3px;
-  cursor: pointer;
-  color: var(--secondary);
-  padding-top: 3px;
+  align-items: center;
+  color: #eeeeee;
   text-decoration: none;
-  justify-content: center;
-  align-content: center;
+  font-size: 24px;
 }
 
-.navbar-icon a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 2px;
-  background-color: var(--btn);
-  transition: width 0.3s ease;
-  border-radius: 2px;
-}
-
-.navbar-icon a:hover::after {
-  width: 100%;
-}
-
-/* tooltip */
 .navbar-icon {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 1rem;
 }
 
 .navbar-icon i {
   cursor: pointer;
 }
 
+/* tooltip akan muncul menggunakan javascript */
 .navbar-icon .tool-tip {
+  display: none;
   position: absolute;
-  bottom: -90%; /* Tooltip muncul di bawah ikon */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #333;
-  color: #fff;
-  padding: 5px 8px;
-  border-radius: 4px;
-  font-size: 13px;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  z-index: 1;
+  top: -25px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
 }
 
-/* Tampilkan tooltip saat hover */
 .navbar-icon a:hover .tool-tip {
-  opacity: 1;
-  visibility: visible;
+  display: block;
 }
 
+/* hamburger menu JS */
+/* Style untuk hamburger menu */
+.hamburger {
+  display: none;
+}
+
+.navbar-mid.active {
+  display: block;  /* Toggle visibility */
+}
 
 
 /* hero */
@@ -160,17 +143,16 @@ html, *, *::before, *::after {
 
 
 .hero .container {
-  justify-content: center;
   display: flex;
-  border: 2px solid #d8b38f;
+  justify-content: center;
   align-content: center;
-  box-sizing: border-box;
   border-radius: 3rem;
-  background: linear-gradient(to bottom, #123458, #265b94);
+  background: linear-gradient(to bottom, var(--prime), #265b94);
   color: #ededed;
+  box-sizing: border-box;
 }
 
-.hero .content {
+.hero .content, .img-hero {
   width: 100%;
   align-content: center;
   margin: 1rem;
@@ -181,6 +163,7 @@ html, *, *::before, *::after {
   align-content: center;
   margin: 1rem;
 }
+
 
 .img-hero img {
   width: 100%;
@@ -242,54 +225,54 @@ html, *, *::before, *::after {
 /* about */
 
 .about {
-  margin-top: 3rem;
   color: var(--prime);
-  padding: 0 7%;
+  padding: 8rem 7% 3rem;
 
 }
 
 .about .card {
   display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
 }
 
 .about .about-content {
     width: 100%;
+    text-align: center;
+    align-items: center;
 }
 
 .about .about-content span {
   font-weight: 700;
 }
 
-.about h1 , .skill h1 {
+.about h1  {
     text-align: center;
     font-size: 3rem;
-    padding-top: 5rem;
     color: var(--prime);
     text-shadow: 1px 1px 3px #4271a3;
-    margin-top: 4rem;
 }
 
 .about-content h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
-.about p {
-  margin: 1rem 0;
-}
+
 
 .about .card-pendidikan {
     background-color: var(--bg);
-    width: 30%;
+    width: 23%;
     background-color: var(--prime);
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     color: var(--secondary);
-    margin-right: 1rem;
-    max-height: 600px;
+    margin: 0.5rem;
+    align-content: center;
   
 }
 
@@ -340,73 +323,57 @@ html, *, *::before, *::after {
 /* skill */
 
 .skill {
-  padding: 0 7%;
+  padding: 8rem 5% 3rem; /* Tambahkan padding top yang lebih besar */
   text-align: center;
   color: var(--prime);
   background: radial-gradient(circle at bottom, #ff9d0059 25%, #12345800 60%);
   height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.skill-content h3 {
-  margin-bottom: 1rem;
+.skill h1 {
+  font-size: 3rem;
 }
+
 
 .container-skill {
   display: flex;
   flex-wrap: wrap;       /* bikin item pindah ke bawah otomatis */
   justify-content: center;
   gap: 20px;
-  width: 100%;
 }
 
 .skill-content {
-  display: flex;
-  flex-direction: column; /* agar item ditumpuk ke bawah */
-  align-items: center; /* untuk horizontal center */
-  justify-content: center; /* untuk vertical center jika perlu */
-  text-align: center; /* agar teks h3 dan p juga rata tengah */
+  background-color: #123458;
   padding: 20px;
-  margin: 10px;
-  color: var(--secondary);
-  background-color: var(--prime);
-  border-radius: 20px;
-  box-shadow: 3px 10px 8px rgba(0, 0, 0, 0.3);
-  margin-top: 2rem;
-  width: 20% ;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
+  border-radius: 30px;
+  width: 20%;
+  margin-top: 3rem;
+  box-shadow: 2px 2px 5px #24242489;
+  transition: 0.3s ease;
 }
-
 .skill-content:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   background-color: #3480cc;
   transition: ease-in-out 0.3s;
 }
 
-.skill-card  {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;
-  border: solid var(--secondary);
-}
+
 
 .skill-card svg {
-  width: 30px;
+ height: 30px;
+ width: 30px;
+ color: #ededed;
 }
 
 
 .skill-desc {
-  width: 100%;
   color: var(--secondary);
 }
 
 .skill-desc p {
   font-weight: 200;
-  text-align: left;
 }
 /* skill */
 
@@ -416,32 +383,23 @@ html, *, *::before, *::after {
 
 
 .project {
-  width: 100%;
   color: var(--prime);
-  padding: 0 7%;
+  padding: 8rem 7% 3rem;
   text-align: center;
   background: radial-gradient(circle at top, #ff9d0059 25%, #12345800 60%);
   height: 100vh;
+  box-sizing: border-box;
 }
 
 
 
 .project h1 {
   text-align: center;
-  padding-top: 5rem;
   margin-bottom: 1rem;
   font-size: 3rem;
   text-shadow: 1px 1px 3px #4271a3
 }
 
-.card-container {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-  border-radius: 100px;
-}
 
 
 .card-project:nth-child(2) {
@@ -453,10 +411,13 @@ html, *, *::before, *::after {
 }
 
 
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Membuat elemen-elemen di dalamnya bisa berpindah baris */
+  justify-content: space-around; /* Mengatur spasi antar elemen */
+}
+
 .card-project {
-  height: 100%;
-  border: 1px solid #c29364;
-  width: 30%;
   padding: 1rem;
   box-sizing: border-box;
   border-radius: 30px;
@@ -465,10 +426,8 @@ html, *, *::before, *::after {
   background-color: #d2aa82;
   box-shadow: 3px 3px 15px #123458;
   margin-top: 2rem;
-  animation: floatIn 1s ease-out, floatMove 3s ease-in-out infinite;
-  opacity: 0;
-  animation-fill-mode: forwards;
   transition: ease-in-out 0.3s;
+  width: 300px;
 }
 
 .card-project:hover {
@@ -478,6 +437,7 @@ html, *, *::before, *::after {
 
 .card-project img {
   width: 100%;
+  height: 200px;
   border-radius: 20px;
 }
 
@@ -485,19 +445,15 @@ html, *, *::before, *::after {
   margin: 1rem 0 0.5rem;
 }
 
-.card-project p {
-  line-height: 30px;
-}
 
 
 
 /* Section Contact */
 
-
 .contact {
+  flex: 1;  /* Membuat bagian contact mengisi ruang yang tersisa */
   padding: 5rem 7%;
   text-align: center;
-  height: 100vh;
   margin-top: 3rem;
 }
 
@@ -606,7 +562,7 @@ html, *, *::before, *::after {
 /* footer */
 
 footer {
-  margin-top: 2rem;
+  margin-top: 3rem;
   background-color: #12345800;
   color: #123458;
   text-align: center;
@@ -619,92 +575,3 @@ footer {
 
 
 
-
-
-
-
-
-/* Animasi masuk */
-
-  
-@keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: scale(1.02);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  @keyframes slideInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes scaleIn {
-    0% {
-      opacity: 0;
-      transform: scale(0.9);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  /* Terapkan animasi ke elemen-elemen hero */
-  .hero img {
-    animation: fadeIn 1.2s ease-out forwards;
-  }
-  
-  .content h1 {
-    animation: slideInUp 1s ease-out forwards;
-    animation-delay: 0.3s;
-  }
-  
-  .content h2 {
-    animation: slideInUp 1s ease-out forwards;
-    animation-delay: 0.6s;
-  }
-  
-  .content p {
-    animation: slideInUp 1s ease-out forwards;
-    animation-delay: 0.9s;
-  }
-  
-  .cta a {
-    animation: scaleIn 0.8s ease-out forwards;
-    animation-delay: 1.2s;
-    opacity: 0; /* supaya muncul setelah animasi jalan */
-  }
-  
-  /* Animasi masuk (fade + naik sedikit) */
-@keyframes floatIn {
-  0% {
-    transform: translateY(30px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Animasi bergerak-gerak pelan */
-@keyframes floatMove {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-  

@@ -3,7 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CV Neza Raekhan</title>
+  <meta name="description" content="Neza Raekhan adalah seorang Front-End Developer dengan pengalaman dalam membangun website yang responsif dan menarik.">
+  <meta name="keywords" content="FrontEnd Developer, Web Developer, Neza Raekhan, HTML, CSS, JavaScript">
+  <meta name="author" content="Neza Raekhan">
+  
+  <!-- Open Graph Meta Tags for Social Media Sharing -->
+  <meta property="og:title" content="Neza Raekhan - FrontEnd Developer">
+  <meta property="og:description" content="Neza Raekhan adalah seorang Front-End Developer dengan pengalaman dalam membangun website yang responsif dan menarik.">
+  <meta property="og:image" content="URL_gambar_thumbnail.jpg">
+  <meta property="og:url" content="https://www.nezaraekhan.com">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <!-- <link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
+  <title>Neza Raekhan - FrontEnd Developer</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,12 +34,12 @@
     <p>Neza Raekhan <span>Maulana</span></p>
   </div>
 
-  <div class="navbar-mid">
+  <div class="navbar-mid" id="navMenu">
     <a href="#home">Beranda</a>
     <a href="#about">Tentang</a>
     <a href="#skill">Skill</a>
     <a href="#project">Project</a>
-    <a href="#Kontak">Kontak</a>
+    <a href="#kontak">Kontak</a>
   </div>
 
   <div class="navbar-icon">
@@ -38,6 +51,9 @@
       <i data-feather="linkedin"></i>
       <span class="tool-tip">Linkedin</span>
     </a>
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars" id="menu-toggle"></i>
+    </div>
   </div>
 
 </nav>
@@ -119,7 +135,7 @@
         </div>
         <div class="skill-content">
           <div class="skill-card">
-            <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 192 192" fill="none"><path stroke="#eeeeee" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" d="M170 42 22 124v14c0 6.627 5.373 12 12 12h78c6.627 0 12-5.373 12-12v-9.5"/><path stroke="#eeeeee" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" d="M170 150 22 68V54c0-6.627 5.373-12 12-12h78c6.627 0 12 5.373 12 12v9.5"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 192 192" fill="none"><path stroke="#eeeeee" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" d="M170 42 22 124v14c0 6.627 5.373 12 12 12h78c6.627 0 12-5.373 12-12v-9.5"/><path stroke="#eeeeee" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" d="M170 150 22 68V54c0-6.627 5.373-12 12-12h78c6.627 0 12 5.373 12 12v9.5"/></svg>
           </div>
           <div class="skill-desc">
             <h3>Capcut</h3>
@@ -191,7 +207,7 @@
 </div>
   </section>
 
-  <section class="contact" id="Kontak">
+  <section class="contact" id="kontak">
     <h2 data-aos="fade-up" data-aos-duration="1000">Hubungi Saya</h2>
     <p data-aos="fade-up" data-aos-delay="300">Ingin bekerja sama atau sekadar menyapa? Saya terbuka untuk kolaborasi maupun percakapan santai. Yuk, terhubung!</p>
     <div class="contact-container">
