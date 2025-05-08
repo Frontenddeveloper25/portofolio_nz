@@ -226,7 +226,7 @@ html, *, *::before, *::after {
   background-color: #f9f9f900;
   font-family: 'poppins', sans-serif;
  height: 100vh;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
   align-content: center;
 }
 
@@ -277,7 +277,7 @@ html, *, *::before, *::after {
   margin-top: 1rem;
 }
 
-.btn {
+.btn-cv {
   display: inline-block;
   background-color: #0077ff;
   color: white;
@@ -288,20 +288,22 @@ html, *, *::before, *::after {
   transition: 0.3s;
 }
 
-.btn:hover {
+.btn-cv:hover {
   background-color: #005fcc;
 }
 
 /* skill */
 
 .skill {
-  padding: 8rem 5% 3rem; /* Tambahkan padding top yang lebih besar */
+  padding: 6rem 5% 3rem; /* Tambahkan padding top yang lebih besar */
   text-align: center;
   color: var(--prime);
   background: radial-gradient(circle at bottom, #ff9d0059 25%, #12345800 60%);
   height: 100vh;
   width: 100%;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .skill h1 {
@@ -312,24 +314,24 @@ html, *, *::before, *::after {
 .container-skill {
   display: flex;
   flex-wrap: wrap;       /* bikin item pindah ke bawah otomatis */
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-between;
+ 
 }
 
 .skill-content {
   background-color: #123458;
-  padding: 20px;
+  padding: 20px 5%;
   border-radius: 30px;
-  width: 20%;
-  margin-top: 3rem;
   box-shadow: 2px 2px 5px #24242489;
   transition: 0.3s ease;
+  margin: 1rem 1rem;
 }
 .skill-content:hover {
   transform: scale(1.1);
   background-color: #3480cc;
   transition: ease-in-out 0.3s;
 }
+
 
 
 
@@ -340,7 +342,7 @@ html, *, *::before, *::after {
 }
 
 
-.skill-desc {
+.skill-card h3 {
   color: var(--secondary);
 }
 
@@ -356,11 +358,12 @@ html, *, *::before, *::after {
 
 .project {
   color: var(--prime);
-  padding: 8rem 7% 3rem;
+  padding: 6rem 7% 3rem;
   text-align: center;
   background: radial-gradient(circle at top, #ff9d0059 25%, #12345800 60%);
   height: 100vh;
   box-sizing: border-box;
+  margin-bottom: 3rem;
 }
 
 
@@ -427,6 +430,7 @@ html, *, *::before, *::after {
   padding: 5rem 7%;
   text-align: center;
   margin-top: 3rem;
+  height: 100vh;
 }
 
 .contact h2 {
@@ -526,7 +530,7 @@ html, *, *::before, *::after {
 
 .contact-info a:hover {
   text-decoration: underline;
-  color: #1C6DD0; /* Opsional: warna hover link */
+  color: #0d3d78; /* Opsional: warna hover link */
 }
 
 
@@ -544,6 +548,85 @@ footer {
 
 
 
+/* other */
+.form-message {
+  display: none;
+  padding: 12px 20px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-size: 14px;
+  margin-top: 15px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Animasi muncul */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 
+/* media queri */
+@media (max-width: 950px) {
+  .navbar-mid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  
+  .navbar-mid a {
+    display: inline-block;
+    position: relative;
+    padding: 0 5px;
+    margin-right: 5px;
+    color: var(--secondary);
+    text-decoration: none;
+    transition: ease 0.3s;
+  }
+}
 
+@media (max-width: 835px) {
+  .navbar-mid {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+  
+  
+  .navbar-mid a {
+    display: none;
+    position: relative;
+    padding: 0 5px;
+    margin-right: 10px;
+    color: var(--secondary);
+    text-decoration: none;
+    transition: ease 0.3s;
+  }
+}
+
+/* other */
+
+#interactionMessage {
+  background-color: #4caf50; /* Warna hijau untuk menunjukkan sukses */
+  color: white; /* Teks berwarna putih */
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px auto;
+  width: 80%; /* Lebar 80% dari layar */
+  max-width: 400px; /* Batas maksimal lebar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Memberikan bayangan di bawah kotak */
+  display: none; /* Awalnya disembunyikan */
+  transition: opacity 0.5s ease-in-out; /* Animasi muncul secara halus */
+}
+
+#interactionMessage.show {
+  display: block; /* Menampilkan elemen saat kelas 'show' ditambahkan */
+  opacity: 1;
+}
