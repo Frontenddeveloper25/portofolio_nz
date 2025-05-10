@@ -35,7 +35,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
   }
 
   if (nama.length < 3) {
-    alert("Nama terlalu pendek, min. 3 karakter.");
+    alert("Pendek Banget Nama lo!!");
     return;
   }
 
