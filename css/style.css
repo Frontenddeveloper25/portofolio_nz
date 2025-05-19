@@ -341,6 +341,11 @@ html, *, *::before, *::after {
  color: #ededed;
 }
 
+.skill-card img {
+  height: 30px;
+  width: 30px;
+}
+
 
 .skill-card h3 {
   color: var(--secondary);
