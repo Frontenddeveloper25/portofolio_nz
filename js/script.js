@@ -74,3 +74,47 @@ document.getElementById("contactForm").addEventListener("submit", function(event
   // Mereset form setelah pengiriman
   this.reset();
 });
+
+
+
+let nama = "raekhan";
+let umur = 25;
+let isStudent = true;
+let campus = "Univ bhayangkara";
+
+
+console.log(nama);
+console.log(umur);
+console.log(isStudent);
+console.log(campus);
+
+if (umur < 13) {
+  console.log("halo " + nama + ", Kamu belum cukup umur.");
+} else if (umur >= 13 && umur <= 19 ) {
+  console.log("halo " + nama + ", Kamu Remaja.");
+} else {
+  console.log("halo " + nama + ", Kamu dewasa.");
+}
+
+if (nama){
+  console.log(`halo ${nama}!`);
+} else {
+  console.log("nama belum di isi");
+}
+
+if (!campus) {
+  console.log("belum terdaftar");
+}else { if (isStudent) {
+  console.log(`Mahasiswa Aktif di ${campus}`);
+}
+ else {
+  console.log("Pendaftaran belum berhasil");
+} }
+
+
+
+if (isStudent) {
+  console.log("Terdaftar");
+} else {
+  console.log("Selesaikan Pendaftaran");
+}
