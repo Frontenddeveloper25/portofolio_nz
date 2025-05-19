@@ -506,21 +506,18 @@ html, *, *::before, *::after {
   border-radius: 20px;
   box-shadow: 3px 0px 5px var(--prime);
   width: 50%;
+  padding: 2rem;
 }
 
-.contact-info p {
+.contact-info p, a {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin: 1rem;
+  margin: 0.5rem;
   color: #333;
   font-size: 1rem;
 }
 
-.contact-info i {
-  color: var(--prime);
-  flex-shrink: 0;
-}
 
 .contact-info a {
   color: var(--prime);
@@ -532,6 +529,10 @@ html, *, *::before, *::after {
   text-decoration: underline;
   color: #0d3d78; /* Opsional: warna hover link */
 }
+
+
+
+
 
 
 
@@ -568,47 +569,7 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
-
-/* media queri */
-@media (max-width: 950px) {
-  .navbar-mid {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  
-  .navbar-mid a {
-    display: inline-block;
-    position: relative;
-    padding: 0 5px;
-    margin-right: 5px;
-    color: var(--secondary);
-    text-decoration: none;
-    transition: ease 0.3s;
-  }
-}
-
-@media (max-width: 835px) {
-  .navbar-mid {
-    display: flex;
-    gap: 5px;
-    flex-wrap: wrap;
-  }
-  
-  
-  .navbar-mid a {
-    display: none;
-    position: relative;
-    padding: 0 5px;
-    margin-right: 10px;
-    color: var(--secondary);
-    text-decoration: none;
-    transition: ease 0.3s;
-  }
-}
-
-/* other */
+/* animation page */
 
 #interactionMessage,#interactionMessage2 {
   position: fixed;
@@ -632,7 +593,7 @@ footer {
   border-top: 4px solid #3498db; /* warna biru cerah */
   border-radius: 50%;
   animation: spin 1s linear infinite;
-  margin: 0 auto 15px;
+  margin: 0 10px;
 }
 
 @keyframes spin {
@@ -640,9 +601,121 @@ footer {
 }
 
 .loadingOverlay p {
-  margin: 0;
+  margin-top: 8px;
   font-size: 16px;
   color: #e9e9e9;
+}
+
+
+
+/* RESPONSIVE STYLES */
+
+/* Tablet */
+@media (max-width: 950px) {
+  .navbar-mid {
+    display: none; /* akan diganti dengan JS toggle dari hamburger */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: linear-gradient(to bottom, #123458, #265b94);
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .navbar-mid.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    padding-bottom: 5px;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 8rem 5% 3rem;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-form,
+  .contact-info {
+    width: 100%;
+  }
+
+  .container-skill {
+    justify-content: center;
+  }
+
+  .card-container {
+    justify-content: center;
+  }
+}
+
+
+/* Smartphone */
+@media (max-width: 600px) {
+  .hero {
+    padding: 7rem 4% 2rem;
+  }
+
+  .content h1 {
+    font-size: 1.8rem;
+  }
+
+  .content h2 {
+    font-size: 1.3rem;
+  }
+
+  .about-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
+  }
+
+  .skill h1,
+  .project h1,
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .card-project {
+    width: 90%;
+  }
+
+  .navbar-icon {
+    gap: 0.5rem;
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 

@@ -1,4 +1,10 @@
 
+function toggleNavbar() {
+  const nav = document.querySelector('.navbar-mid');
+  nav.classList.toggle('active');
+}
+
+
 // button1
 function handleLinkClick(buttonId, loadingId) {
   const link = document.getElementById(buttonId);
@@ -8,7 +14,7 @@ function handleLinkClick(buttonId, loadingId) {
   link.addEventListener('click', function(e) {
     e.preventDefault();
     link.style.pointerEvents = 'none';
-    loading.style.display = 'inline';
+    loading.style.display = 'flex';
 
     setTimeout(()=>{
       window.open(url, '_blank');
