@@ -610,23 +610,39 @@ footer {
 
 /* other */
 
-#interactionMessage {
-  background-color: #4caf50; /* Warna hijau untuk menunjukkan sukses */
-  color: white; /* Teks berwarna putih */
-  padding: 15px;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 20px auto;
-  width: 80%; /* Lebar 80% dari layar */
-  max-width: 400px; /* Batas maksimal lebar */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Memberikan bayangan di bawah kotak */
-  display: none; /* Awalnya disembunyikan */
-  transition: opacity 0.5s ease-in-out; /* Animasi muncul secara halus */
+#interactionMessage,#interactionMessage2 {
+  position: fixed;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(53, 53, 53); /* atau transparan, sesuai desain */
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 9999;
+  font-size: 18px;
+  display: none;
+  width: 50%;
 }
 
-#interactionMessage.show {
-  display: block; /* Menampilkan elemen saat kelas 'show' ditambahkan */
-  opacity: 1;
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ccc;
+  border-top: 4px solid #3498db; /* warna biru cerah */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 15px;
 }
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loadingOverlay p {
+  margin: 0;
+  font-size: 16px;
+  color: #e9e9e9;
+}
+
+

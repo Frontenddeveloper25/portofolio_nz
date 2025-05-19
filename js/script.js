@@ -1,51 +1,32 @@
 
 // button1
-// Menghandle interaksi saat tombol "Lihat CV" diklik
-function showInteraction(event) {
-  event.preventDefault(); // Menghindari default action link (pembukaan halaman)
+function handleLinkClick(buttonId, loadingId) {
+  const link = document.getElementById(buttonId);
+  const loading = document.getElementById(loadingId);
+  const url = link.getAttribute('href');
 
-  var interactionMessage = document.getElementById("interactionMessage");
-  if (interactionMessage) {
-    interactionMessage.classList.add("show"); // Menampilkan pesan interaksi
-  }
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    link.style.pointerEvents = 'none';
+    loading.style.display = 'inline';
 
-  // Setelah 2 detik, membuka link CV
-  setTimeout(function() {
-    // Membuka link CV
-    window.open("https://www.canva.com/design/DAGl1xiUTOc/TEih2FxJzexHAat8aOyxJQ/edit", "_blank");
-
-    // Setelah halaman dibuka, menyembunyikan pesan interaksi
-    interactionMessage.classList.remove("show");
-  }, 2000); // 2 detik delay sebelum membuka link dan menghilangkan pesan
+    setTimeout(()=>{
+      window.open(url, '_blank');
+      loading.style.display = 'none';
+      link.style.pointerEvents = 'auto';
+    }, 2000);
+});
 }
+  
 
-function showInteraction(event) {
-  event.preventDefault(); // Menghindari default action link (pembukaan halaman)
+// aktifkan fungsi btn
+handleLinkClick('lihatCv','interactionMessage');
+handleLinkClick('lihatCv2','interactionMessage2');
 
-  var interactionMessage2 = document.getElementById("interactionMessage");
-  if (interactionMessage2) {
-    interactionMessage2.classList.add("show"); // Menampilkan pesan interaksi
-  }
-
-  // Setelah 2 detik, membuka link CV
-  setTimeout(function() {
-    // Membuka link CV
-    window.open("https://id.linkedin.com/in/neza-raekhan-maulana-867a92181", "_blank");
-
-    // Setelah halaman dibuka, menyembunyikan pesan interaksi
-    interactionMessage.classList.remove("show");
-  }, 2000); // 2 detik delay sebelum membuka link dan menghilangkan pesan
-}
-
-// Menghandle interaksi saat tombol "Lihat CV" diklik
-
-
+// end========================================
 
 // ------------------------------------------------------
 
-
-// Menambahkan event listener untuk tombol "Lihat CV"
-document.getElementById("lihatCv").addEventListener("click", showInteraction);
 
 // Menghandle pengiriman formulir
 document.getElementById("contactForm").addEventListener("submit", function(event) {
