@@ -83,10 +83,11 @@ let isStudent = true;
 let campus = "Univ bhayangkara";
 
 
+
 console.log(nama);
 console.log(umur);
 console.log(isStudent);
-console.log(campus);
+console.log(campus); 
 
 if (umur < 13) {
   console.log("halo " + nama + ", Kamu belum cukup umur.");
@@ -118,3 +119,52 @@ if (isStudent) {
 } else {
   console.log("Selesaikan Pendaftaran");
 }
+
+if (isStudent) { console.log(`halo saya ${nama}, saya kuliah di ${campus}`);}
+else {
+  console.log("belum terdaftar");
+}
+
+function haiDude () {
+  console.log("halo elvira!");
+}
+
+haiDude ();
+
+function hitungUmur(tahunLahir, tahunSekarang) {
+  let umur = tahunSekarang - tahunLahir;
+  console.log(`Umur kamu adalah ${umur} tahun.`);
+}
+
+hitungUmur(2000, 2025);
+
+function hitungSisaGaji(gaji, pengeluaran, uangMakan) {
+  let sisa = gaji - pengeluaran - uangMakan;
+  console.log(`gaji: Rp ${gaji}`);
+  console.log(`Kost dan Transportasi : Rp ${pengeluaran}`);
+  console.log(`Uang Makan : ${uangMakan}`)
+  console.log(`Sisa Gaji: Rp ${sisa}`);
+}
+
+hitungSisaGaji (4800000, 2000000, 1000000);
+
+function laporanKeuangan(nama, gaji, pengeluaran) {
+  // Hitung sisa gaji
+  const sisa = gaji - pengeluaran;
+  
+  // Helper untuk format angka ke "1.234.567"
+  const formatRupiah = (angka) => {
+    return angka.toLocaleString('id-ID');
+  };
+  
+  // Cetak laporan
+  console.log(`Halo ${nama}!`);
+  console.log(`Gaji Bulanan Anda: Rp ${formatRupiah(gaji)}`);
+  console.log(`Total Pengeluaran: Rp ${formatRupiah(pengeluaran)}`);
+  console.log(`Sisa Gaji: Rp ${formatRupiah(sisa)}`);
+}
+
+// Contoh pemakaian:
+laporanKeuangan("Elvira", 4800000, 2000000);
+
+
